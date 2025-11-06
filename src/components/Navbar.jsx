@@ -1,25 +1,25 @@
-import React from 'react';
-import { Sparkles } from 'lucide-react';
+import { Stethoscope } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="w-full sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/20 border-b border-white/10">
-      <nav className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2 text-white">
-          <div className="h-9 w-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center">
-            <Sparkles className="h-5 w-5 text-white" />
+    <header className="sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/30 border-b border-white/10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="#home" className="flex items-center gap-2 text-white">
+          <div className="p-2 rounded-md bg-cyan-500/20 ring-1 ring-cyan-400/40">
+            <Stethoscope className="h-5 w-5 text-cyan-300" />
           </div>
-          <span className="font-semibold tracking-tight">CMF 2 Pro</span>
-        </div>
-        <div className="hidden md:flex items-center gap-6 text-sm text-white/80">
-          <a href="#features" className="hover:text-white transition">Features</a>
-          <a href="#tech" className="hover:text-white transition">Technology</a>
-          <a href="#buy" className="hover:text-white transition">Buy</a>
-        </div>
-        <button className="inline-flex items-center rounded-full bg-white text-black px-4 py-2 text-sm font-medium shadow/50 shadow-white/10 hover:shadow-white/20 transition">
-          Pre-order
-        </button>
-      </nav>
+          <span className="text-lg font-semibold tracking-tight">HealthXpert</span>
+        </a>
+        <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
+          <a href="#datasets" className="hover:text-white transition">Datasets</a>
+          <a href="#assistant" className="hover:text-white transition">Assistant</a>
+          <a href="#upload" className="hover:text-white transition">Upload</a>
+          <a href="#contact" className="hover:text-white transition">Contact</a>
+        </nav>
+        <a href="#assistant" className="inline-flex items-center gap-2 rounded-md bg-cyan-500/20 text-cyan-300 px-3 py-2 ring-1 ring-inset ring-cyan-400/40 hover:bg-cyan-500/30 transition text-sm">
+          Try Diagnosis
+        </a>
+      </div>
     </header>
   );
 }

@@ -1,33 +1,32 @@
-import React from 'react';
 import Spline from '@splinetool/react-spline';
+import { Sparkles } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] w-full bg-black text-white overflow-hidden">
+    <section id="home" className="relative h-[90vh] w-full overflow-hidden">
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/4Zh-Q6DWWp5yPnQf/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/2fSS9b44gtYBt4RI/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-28">
-        <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/80">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            Live preview — Floating glassmorphic 3D on dark
-          </div>
-          <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
-            Nothing CMF 2 Pro
-          </h1>
-          <p className="mt-4 text-white/80 text-lg md:text-xl">
-            A futuristic flagship with transparent aesthetics, dynamic lighting, and AI-enhanced performance.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#buy" className="rounded-full bg-white text-black px-5 py-3 text-sm font-medium hover:bg-white/90 transition">Pre-order now</a>
-            <a href="#features" className="rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white hover:bg-white/10 transition">Explore features</a>
+      {/* Gradients that don't block interaction */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(75%_60%_at_10%_50%,rgba(0,255,255,0.25),transparent),radial-gradient(60%_60%_at_80%_20%,rgba(59,130,246,0.2),transparent)] mix-blend-screen" />
+
+      <div className="relative z-10 h-full flex items-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
+          <div className="backdrop-blur-sm bg-black/30 ring-1 ring-white/10 rounded-2xl p-6 md:p-8 text-white">
+            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-cyan-300/80">
+              <Sparkles className="h-4 w-4" />
+              AI-Powered Medical Insights
+            </span>
+            <h1 className="mt-3 text-3xl md:text-5xl font-semibold leading-tight">HealthXpert — Diagnose Smarter, Faster</h1>
+            <p className="mt-3 text-white/80 md:text-lg">Upload medical reports and disease images. Our assistant highlights key findings, compares against curated datasets, and explains in plain language.</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="#upload" className="inline-flex items-center justify-center rounded-md bg-cyan-500/20 text-cyan-300 px-4 py-2 ring-1 ring-inset ring-cyan-400/40 hover:bg-cyan-500/30 transition">Upload Reports</a>
+              <a href="#assistant" className="inline-flex items-center justify-center rounded-md bg-white/10 text-white px-4 py-2 ring-1 ring-white/20 hover:bg-white/20 transition">Chat with AI</a>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.25),transparent_50%)]" />
     </section>
   );
 }
